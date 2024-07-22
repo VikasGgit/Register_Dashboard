@@ -21,7 +21,7 @@ const Dashboard = () => {
     const fetchAppointments = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/api/v2/appointment/allAppointments",
+          "https://register-backend-r8qp.onrender.com/api/v2/appointment/allAppointments",
           { withCredentials: true }
         );
         setAppointments(response.data.appointments);

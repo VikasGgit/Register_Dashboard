@@ -24,7 +24,7 @@ const [mntnrAvtar, setMntnrAvtar]=useState("");
 const handleAdd= async (e)=>{
   e.preventDefault();
   try{
-     const res= await axios.post("http://localhost:4000/api/v2/mntnr/addNew", {email,firstName, lastName, password, gender, dob, role:"Admin", phoneNumber}, { withCredentials: true, headers: {'Content-Type': 'application/json'}, })
+     const res= await axios.post("https://register-backend-r8qp.onrender.com/api/v2/mntnr/addNew", {email,firstName, lastName, password, gender, dob, role:"Admin", phoneNumber}, { withCredentials: true, headers: {'Content-Type': 'application/json'}, })
     toast.success(res.data.message);
     navigateto("/")
   }

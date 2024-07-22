@@ -10,7 +10,7 @@ const Message = () => {
   useEffect(() =>{
     const fetchMessages= async ()=>{
       try{
-          const response=await axios.get("http://localhost:4000/api/v2/message/allMessage", {withCredentials:true},)
+          const response=await axios.get("https://register-backend-r8qp.onrender.com/api/v2/message/allMessage", {withCredentials:true},)
           setMessages(response.data.message);
       }catch(err){
         console.error("Error in detecting message" , err);
